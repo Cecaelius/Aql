@@ -5,26 +5,26 @@ import { useEffect, useRef, useState } from "react";
 const features = [
   {
     number: "01",
-    title: "Autonomous Execution",
-    description: "Deploy AI agents that work independently. They analyze, decide, and execute complex multi-step tasks without human intervention.",
-    stats: { value: "99.7%", label: "task completion" },
+    title: "Connect your knowledge",
+    description: "Bring together documents, FAQs, website content, product information, and internal knowledge in one trusted source for your assistant.",
+    stats: { value: "24/7", label: "always-on answers" },
   },
   {
     number: "02",
-    title: "Distributed Computing",
-    description: "Offload compute-heavy tasks to our global network. Your agents run on optimized infrastructure across 50+ regions worldwide.",
+    title: "Answer customers 24/7",
+    description: "Give customers useful answers around the clock, grounded in the knowledge your business already owns.",
     stats: { value: "50+", label: "global regions" },
   },
   {
     number: "03",
-    title: "Multi-Agent Orchestration",
-    description: "Coordinate teams of specialized agents. They communicate, delegate, and collaborate to solve complex problems together.",
+    title: "Reduce repetitive support",
+    description: "Let your team spend less time repeating answers and more time on the work that moves the business forward.",
     stats: { value: "1000x", label: "parallel execution" },
   },
   {
     number: "04",
-    title: "Secure Sandboxing",
-    description: "Each agent runs in isolated environments. Full audit trails, encrypted execution, and zero data leakage between tasks.",
+    title: "Fit your brand",
+    description: "Customize how Aql looks, sounds, and helps so the assistant feels like a natural part of your customer experience.",
     stats: { value: "0", label: "data breaches" },
   },
 ];
@@ -165,16 +165,16 @@ export function FeaturesSection() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                Intelligent
+                Knowledge,
                 <br />
-                <span className="text-muted-foreground">workers.</span>
+                <span className="text-muted-foreground">at work.</span>
               </h2>
             </div>
             <div className="lg:col-span-5 lg:pb-4">
               <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}>
-                Deploy autonomous AI agents that execute complex tasks across distributed infrastructure. No supervision required.
+                Aql turns the information your business already has into a helpful, always-on assistant for every customer question.
               </p>
             </div>
           </div>

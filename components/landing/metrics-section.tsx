@@ -7,8 +7,8 @@ const metrics = [
     value: 12847392, 
     suffix: "", 
     prefix: "",
-    label: "Tasks completed today",
-    sublabel: "by 23,847 active agents",
+    label: "Customer questions answered",
+    sublabel: "from your business knowledge",
   },
   { 
     value: 99, 
@@ -164,7 +164,7 @@ function DotGraph({
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const frameRef = useRef(0);
-  const timeRef = useRef(Math.random() * 100);
+  const timeRef = useRef(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -259,9 +259,9 @@ export function MetricsSection() {
             <h2 className={`text-6xl md:text-7xl lg:text-[140px] font-display tracking-tight leading-[0.95] transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
-              Real-time
+              Always-on
               <br />
-              <span className="text-muted-foreground">agent metrics.</span>
+              <span className="text-muted-foreground">assistant performance.</span>
             </h2>
           </div>
         </div>

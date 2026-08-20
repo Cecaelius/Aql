@@ -4,19 +4,19 @@ import { useState, useEffect, useRef } from "react";
 
 const features = [
   { 
-    title: "TypeScript native", 
+    title: "Simple embed", 
     description: "Full type safety for agent configs and responses."
   },
   { 
-    title: "Streaming results", 
+    title: "Brand-matched UI", 
     description: "Watch your agents think and act in real-time."
   },
   { 
-    title: "Multi-model support", 
+    title: "Private deployment", 
     description: "OpenAI, Anthropic, Mistral, or bring your own."
   },
   { 
-    title: "Local debugging", 
+    title: "API-ready", 
     description: "Test agents locally before deploying to cloud."
   },
 ];
@@ -68,12 +68,12 @@ export function DevelopersSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-foreground/30" />
-            Developer SDK
+            Website deployment
           </span>
           <h2 className="text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9]">
-            Code your agents.
+            Make support
             <br />
-            <span className="text-muted-foreground">Or let them code.</span>
+            <span className="text-muted-foreground">feel like your brand.</span>
           </h2>
         </div>
 
@@ -84,8 +84,7 @@ export function DevelopersSection() {
           }`}
         >
           <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-md">
-            A powerful SDK for building, deploying, and orchestrating AI agents. 
-            Define behaviors in code or natural language.
+            Add Aql to your existing website and shape the assistant’s tone, appearance, and behavior without building an AI engineering team.
           </p>
           <div className="grid grid-cols-2 gap-6">
             {features.map((feature, index) => (

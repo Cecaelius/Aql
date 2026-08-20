@@ -5,9 +5,9 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Define",
-    subtitle: "your agent",
-    description: "Describe what your agent should do. Set its capabilities, constraints, and goals in natural language or code.",
+    title: "Connect",
+    subtitle: "your knowledge",
+    description: "Bring your documents, FAQs, website content, product information, and internal knowledge into Aql.",
     code: `const researcher = new Agent({
   role: 'Research Analyst',
   capabilities: ['web', 'docs', 'api'],
@@ -17,9 +17,9 @@ const steps = [
   },
   {
     number: "02",
-    title: "Assign",
-    subtitle: "the task",
-    description: "Give your agent a mission. It breaks down complex tasks into steps and executes them autonomously.",
+    title: "Customize",
+    subtitle: "the experience",
+    description: "Shape the assistant around your brand, voice, products, and the questions your customers ask most.",
     code: `await researcher.execute({
   task: 'Analyze competitor pricing',
   sources: ['public-data', 'news'],
@@ -29,9 +29,9 @@ const steps = [
   },
   {
     number: "03",
-    title: "Monitor",
-    subtitle: "& scale",
-    description: "Track progress in real-time. Spin up more agents as needed. Pay only for compute used.",
+    title: "Deploy",
+    subtitle: "& improve",
+    description: "Add Aql to your website, review what customers ask, and keep your assistant aligned as your business grows.",
     code: `optimus.dashboard({
   agents: [researcher],
   metrics: ['tasks', 'latency', 'cost'],
@@ -81,16 +81,16 @@ export function HowItWorksSection() {
             <div className={`transition-all duration-1000 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"}`}>
               <span className="inline-flex items-center gap-3 text-sm font-mono text-white/40 mb-8">
                 <span className="w-12 h-px bg-white/20" />
-                Process
+                How it works
               </span>
             </div>
             
             <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.85] transition-all duration-1000 delay-100 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
             }`}>
-              <span className="block">Define.</span>
-              <span className="block text-white/30">Deploy.</span>
-              <span className="block text-white/10">Scale.</span>
+              <span className="block">Connect.</span>
+              <span className="block text-white/30">Customize.</span>
+              <span className="block text-white/10">Deploy.</span>
             </h2>
           </div>
 

@@ -21,8 +21,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'COMPUTE - AI Agents for Distributed Computing',
-  description: 'Deploy autonomous AI agents on distributed infrastructure. Offload complex tasks to intelligent workers that run 24/7.',
+  title: 'Aql by Neural Script — Turn Your Business Knowledge Into an AI Assistant',
+  description: 'Turn your documents, FAQs, website content, and internal knowledge into a branded AI assistant that answers customers 24/7.',
   generator: 'v0.app',
 }
 

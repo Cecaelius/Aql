@@ -5,28 +5,28 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Our agents handle 80% of our customer support tickets autonomously. The ROI was immediate.",
+    quote: "Aql gives every visitor a clear next step, even when our team is offline.",
     author: "Sarah Chen",
     role: "CTO",
     company: "Meridian Labs",
     metric: { value: "80%", label: "Ticket resolution" },
   },
   {
-    quote: "We deployed research agents that work 24/7. They surface insights we'd never find manually.",
+    quote: "Our customers get answers from the knowledge we already maintain, without adding another queue for the team.",
     author: "Marcus Webb",
     role: "Head of Research",
     company: "Flux Systems",
     metric: { value: "10x", label: "Research output" },
   },
   {
-    quote: "The multi-agent orchestration is incredible. Complex workflows that took weeks now run in hours.",
+    quote: "The assistant feels like part of our website—not a generic chatbot bolted onto it.",
     author: "Elena Rodriguez",
     role: "VP Engineering",
     company: "Beacon AI",
     metric: { value: "40x", label: "Faster workflows" },
   },
   {
-    quote: "Security was our biggest concern. The sandboxing and audit trails gave us full confidence.",
+    quote: "We wanted the convenience of AI without giving up control of our company knowledge.",
     author: "James Liu",
     role: "CISO",
     company: "Prism Analytics",
@@ -94,13 +94,13 @@ export function TestimonialsSection() {
           <div>
             <span className="inline-flex items-center gap-3 text-sm font-mono text-background/40 mb-4">
               <span className="w-12 h-px bg-background/20" />
-              Testimonials
+Customer outcomes
             </span>
             <h2 className={`text-4xl lg:text-5xl font-display transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}>
-              Trusted by teams
-              <span className="text-background/40"> worldwide.</span>
+              Turn questions
+              <span className="text-background/40"> into momentum.</span>
             </h2>
           </div>
           

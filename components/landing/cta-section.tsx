@@ -51,14 +51,13 @@ export function CtaSection() {
               {/* Left content */}
               <div className="flex-1">
                 <h2 className="text-6xl md:text-7xl lg:text-[72px] font-display tracking-tight mb-8 leading-[0.95]">
-                  Ready to delegate
+                  Ready to turn your knowledge
                   <br />
-                  to AI agents?
+                  into an assistant?
                 </h2>
 
                 <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
-                  Join teams automating complex workflows with COMPUTE agents. 
-                  Deploy your first agent in minutes.
+                  Give customers instant, useful answers with Aql. Connect your business knowledge and add a branded assistant to your website.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -66,7 +65,7 @@ export function CtaSection() {
                     size="lg"
                     className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
                   >
-                    Deploy your first agent
+                    Build your Aql assistant
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </Button>
                   <Button
@@ -79,7 +78,7 @@ export function CtaSection() {
                 </div>
 
                 <p className="text-sm text-muted-foreground mt-8 font-mono">
-                  1,000 free tasks with COMPUTE
+                  Start with the knowledge your business already has
                 </p>
               </div>
 

@@ -6,31 +6,31 @@ import { Shield, Lock, Eye, FileCheck } from "lucide-react";
 const securityFeatures = [
   {
     icon: Shield,
-    title: "Isolated execution",
+    title: "Isolated knowledge",
     description: "Each agent runs in its own secure sandbox.",
     image: "/images/isolated.jpg",
   },
   {
     icon: Lock,
-    title: "Encrypted memory",
+    title: "Controlled access",
     description: "Data encrypted at rest and in transit.",
     image: "/images/encrypted.jpg",
   },
   {
     icon: Eye,
-    title: "Full audit trails",
+    title: "Clear source grounding",
     description: "Every action logged and inspectable.",
     image: "/images/audit.jpg",
   },
   {
     icon: FileCheck,
-    title: "Permission boundaries",
+    title: "Private infrastructure",
     description: "Principle of least privilege by design.",
     image: "/images/permissions.jpg",
   },
 ];
 
-const certifications = ["SOC 2", "ISO 27001", "HIPAA", "GDPR"];
+const certifications = ["Data isolation", "Private deployment", "Source grounded", "Brand control"];
 
 export function SecuritySection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -67,16 +67,16 @@ export function SecuritySection() {
             isVisible ? "opacity-100" : "opacity-0"
           }`}>
             <span className="w-12 h-px bg-foreground/20" />
-            Security
+Trust & control
           </span>
           
           {/* Title — full width */}
           <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] mb-12 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}>
-            Autonomous,
+            Helpful,
             <br />
-            <span className="text-muted-foreground">not uncontrolled.</span>
+            <span className="text-muted-foreground">not overreaching.</span>
           </h2>
           
           {/* Description — below title */}
@@ -84,7 +84,7 @@ export function SecuritySection() {
             isVisible ? "opacity-100" : "opacity-0"
           }`}>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Your agents are powerful but constrained. Enterprise-grade security ensures they only do what you allow.
+              Your business knowledge stays isolated and controlled. Aql gives teams a dependable way to share answers without exposing everything behind the scenes.
             </p>
           </div>
         </div>
@@ -112,7 +112,7 @@ export function SecuritySection() {
               <span className="font-mono text-sm text-muted-foreground">Active protection</span>
               <div className="mt-8">
                 <span className="text-7xl lg:text-8xl font-display">0</span>
-                <span className="block text-muted-foreground mt-2">Security incidents this year</span>
+                <span className="block text-muted-foreground mt-2">Knowledge boundaries by design</span>
               </div>
             </div>
             
