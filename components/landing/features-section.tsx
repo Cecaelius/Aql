@@ -5,27 +5,18 @@ import { useEffect, useRef, useState } from "react";
 const features = [
   {
     number: "01",
-    title: "Connect your knowledge",
-    description: "Bring together documents, FAQs, website content, product information, and internal knowledge in one trusted source for your assistant.",
-    stats: { value: "24/7", label: "always-on answers" },
+    title: "Scattered Knowledge",
+    description: "Documents, FAQs, product information, emails and internal resources are difficult to search and use.",
   },
   {
     number: "02",
-    title: "Answer customers 24/7",
-    description: "Give customers useful answers around the clock, grounded in the knowledge your business already owns.",
-    stats: { value: "50+", label: "global regions" },
+    title: "Repetitive Support Questions",
+    description: "Support teams spend hours answering questions that could be handled automatically.",
   },
   {
     number: "03",
-    title: "Reduce repetitive support",
-    description: "Let your team spend less time repeating answers and more time on the work that moves the business forward.",
-    stats: { value: "1000x", label: "parallel execution" },
-  },
-  {
-    number: "04",
-    title: "Fit your brand",
-    description: "Customize how Aql looks, sounds, and helps so the assistant feels like a natural part of your customer experience.",
-    stats: { value: "0", label: "data breaches" },
+    title: "Difficult AI Implementation",
+    description: "Most businesses don't have the engineering resources to build and maintain a reliable AI knowledge system.",
   },
 ];
 
@@ -158,68 +149,54 @@ export function FeaturesSection() {
             <div className="lg:col-span-7">
               <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
                 <span className="w-12 h-px bg-foreground/30" />
-                Capabilities
+                The problem
               </span>
               <h2
                 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                Knowledge,
+                Your business already has the answers.
                 <br />
-                <span className="text-muted-foreground">at work.</span>
+                <span className="text-muted-foreground">They're just scattered everywhere.</span>
               </h2>
             </div>
             <div className="lg:col-span-5 lg:pb-4">
               <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}>
-                Aql turns the information your business already has into a helpful, always-on assistant for every customer question.
+                The information is there. The challenge is making it useful, accessible, and ready to help.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Bento Grid Layout */}
-        <div className="grid lg:grid-cols-12 gap-4 lg:gap-6">
-          {/* Large feature card */}
-          <div 
-            className={`lg:col-span-12 relative bg-black border border-foreground/10 min-h-[500px] overflow-hidden group transition-all duration-700 flex ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-            }`}
-            onMouseEnter={() => setActiveFeature(0)}
-          >
-            {/* Left: text content */}
-            <div className="relative flex-1 p-8 lg:p-12 bg-black">
-              <ParticleVisualization />
-              <div className="relative z-10">
-                <span className="font-mono text-sm text-muted-foreground">{features[0].number}</span>
-                <h3 className="text-3xl lg:text-4xl font-display mt-4 mb-6 group-hover:translate-x-2 transition-transform duration-500">
-                  {features[0].title}
-                </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed max-w-md mb-8">
-                  {features[0].description}
-                </p>
+        {/* Problem cards */}
+        <div className="grid md:grid-cols-3 gap-4 lg:gap-6">
+          {features.map((feature, index) => (
+            <article
+              key={feature.number}
+              className={`relative min-h-[360px] bg-black border border-foreground/10 overflow-hidden group transition-all duration-700 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+              }`}
+              style={{ transitionDelay: `${index * 120}ms` }}
+              onMouseEnter={() => setActiveFeature(index)}
+            >
+              {index === 0 && <ParticleVisualization />}
+              <div className="relative z-10 flex min-h-[360px] flex-col justify-between p-8 lg:p-10">
                 <div>
-                  <span className="text-5xl lg:text-6xl font-display">{features[0].stats.value}</span>
-                  <span className="block text-sm text-muted-foreground font-mono mt-2">{features[0].stats.label}</span>
+                  <span className="font-mono text-sm text-muted-foreground">{feature.number}</span>
+                  <h3 className="text-3xl lg:text-4xl font-display mt-6 mb-6 group-hover:translate-x-2 transition-transform duration-500">
+                    {feature.title}
+                  </h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
+                <div className="mt-10 h-px w-full bg-foreground/20 transition-colors duration-500 group-hover:bg-foreground/60" />
               </div>
-            </div>
-
-            {/* Right: mirrored image, full height */}
-            <div className="hidden lg:block relative w-[42%] shrink-0 overflow-hidden">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png"
-                alt=""
-                aria-hidden="true"
-                className="absolute inset-0 w-full h-full object-cover object-center"
-                style={{ transform: "scaleX(-1)" }}
-              />
-              {/* Fade left edge into black */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent" />
-            </div>
-          </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
